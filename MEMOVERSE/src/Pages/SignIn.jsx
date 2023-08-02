@@ -1,10 +1,6 @@
+import { gradientStyle } from "../Component/element/GradientStyle";
 export default function SignIn() {
-  const gradientStyle = {
-    backgroundImage: "linear-gradient(to top right, #fddec5, #fffbf7)",
-    backdropFilter: "blur(900px)",
-    WebkitBackdropFilter: "blur(900px)",
-  };
-
+  
   return (
     <div className="sm:grid sm:grid-cols-2">
       {/* right seection */}
@@ -36,7 +32,7 @@ export default function SignIn() {
           className="container
      mx-auto p-[60px]"
         >
-          <img className="" alt="" src="src/assets/images/MEMOVERSE (1).png" />
+          <img className="" alt="logo" src="src/assets/images/MEMOVERSE (1).png" />
           <h1 className="text-center pt-[100px] pb-[70px] text-white text-[44px] font-bold leading-[58px]">
             Sign in
           </h1>
