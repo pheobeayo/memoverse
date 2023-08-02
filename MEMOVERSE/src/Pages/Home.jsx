@@ -4,6 +4,7 @@ import Card from "../Component/element/Card";
 import classNames from "classnames";
 import { useState } from "react";
 import BlogDummy from "../utils/dummyData";
+import BlogPost from "../Component/BlogPost/BlogProps";
 
 export default function Home() {
   const [isHover, setHover] = useState(false);
@@ -245,25 +246,15 @@ export default function Home() {
             </div>
 
             <div className="sm:grid sm:grid-cols-2">
-
-              {/* first blog */}
-              <div className="sm:flex gap-4 py-[40px]">
-                <img alt="" src="src/assets/images/B-frame4.png" />
-                <div>
-                  <h3 className="text-orange-300 text-xl font-semibold leading-7">
-                    Journey through Time: My <br /> UnforgettableAdventures
-                    Around <br /> the World
-                  </h3>
-                  <p className="text-justify py-[12px] text-white text-opacity-80 text-base font-normal leading-snug">
-                    From the majestic peaks of snow-capped <br /> mountains to the
-                    sun-kissed beaches with <br /> turquoise waters, each photograph
-                    becomes a <br /> window to a new world, inviting you to explore <br /> and
-                    dream
-                  </p>
-                  <p className="text-orange-300 text-base font-normal leading-snug">Read More - </p>
-                </div>
-              </div>
-
+              {BlogDummy.map((Blog) => (
+                <BlogPost
+                  key={Blog.id} // Add the 'key' prop with a unique identifier
+                  imgSrc={Blog.imgSrc}
+                  title={Blog.title}
+                  content={Blog.content}
+                  more={Blog.more}
+                />
+              ))}
             </div>
           </div>
         </div>
