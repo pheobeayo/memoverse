@@ -3,6 +3,7 @@ import { gradientStyle } from "../Component/element/GradientStyle";
 import Card from "../Component/element/Card";
 import classNames from "classnames";
 import { useState } from "react";
+import BlogDummy from "../utils/dummyData";
 
 export default function Home() {
   const [isHover, setHover] = useState(false);
@@ -226,6 +227,43 @@ export default function Home() {
               <button className="bg-gradient-to-r from-orange-400 px-5 py-2.5  to-orange-400 text-white rounded-sm text-center ">
                 Start Creating
               </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Third section */}
+        <div className="bg-stone-950">
+          <div className="container mx-auto px-8 sm:px-[80px] pb-[100px]">
+            <div className="flex justify-between">
+              {/* Header */}
+              <h3 className="text-white sm:text-3xl font-bold leading-10">
+                Trending and Featured Blog posts
+              </h3>
+              <p className="text-white text-opacity-60 text-xs  sm:text-lg font-normal pt-3 sm:pt-0 leading-5 sm:leading-7">
+                Explore more
+              </p>
+            </div>
+
+            <div className="sm:grid sm:grid-cols-2">
+
+              {/* first blog */}
+              <div className="sm:flex gap-4 py-[40px]">
+                <img alt="" src="src/assets/images/B-frame4.png" />
+                <div>
+                  <h3 className="text-orange-300 text-xl font-semibold leading-7">
+                    Journey through Time: My <br /> UnforgettableAdventures
+                    Around <br /> the World
+                  </h3>
+                  <p className="text-justify py-[12px] text-white text-opacity-80 text-base font-normal leading-snug">
+                    From the majestic peaks of snow-capped <br /> mountains to the
+                    sun-kissed beaches with <br /> turquoise waters, each photograph
+                    becomes a <br /> window to a new world, inviting you to explore <br /> and
+                    dream
+                  </p>
+                  <p className="text-orange-300 text-base font-normal leading-snug">Read More - </p>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
