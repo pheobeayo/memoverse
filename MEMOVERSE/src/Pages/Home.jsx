@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { useState } from "react";
 import BlogDummy from "../utils/dummyData";
 import BlogPost from "../Component/BlogPost/BlogProps";
+import Subscriber from "../Component/element/subscribe";
 
 export default function Home() {
   const [isHover, setHover] = useState(false);
@@ -304,10 +305,40 @@ export default function Home() {
                   Community and Collaboration
                 </h2>
                 <p className=" text-white text-center text-lg font-normal leading-relaxed">
-                  Engage in co-authoring, receive feedback, <br /> and explore diverse
-                  perspectives, <br /> fostering a thriving space for creativity  <br /> and
-                  shared storytelling experiences.
+                  Engage in co-authoring, receive feedback, <br /> and explore
+                  diverse perspectives, <br /> fostering a thriving space for
+                  creativity <br /> and shared storytelling experiences.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Fifth section */}
+        <div className="bg-stone-950">
+          <div className="container mx-auto  sm:px-[80px] pb-[100px]">
+            <div style={gradientStyle}>
+              <div className="sm:flex sm:justify-between  py-[40px] px-[100px]">
+                <div className="hidden  sm:grid sm:w-[317px] sm:h-[312px]">
+                  <img
+                    src="src/assets/images/SignIn-Icon.png"
+                    alt="illustration"
+                  />
+                </div>
+
+                <div className="">
+                  <h2 className="text-stone-950 text-xl sm:text-3xl font-bold leading-10">
+                    Subscribe to our mailing list
+                  </h2>
+                  <p className="text-justify pt-[10px] text-black text-xs sm:text-xl font-normal leading-5 sm:leading-7">
+                    Be the first to unlock a world of creativity,
+                    <br /> captivating stories, and cherished memories.
+                    <br /> Receive exclusive updates, exciting content, and{" "}
+                    <br /> special offers right in your inbox.
+                  </p>
+
+                  <Subscriber />
+                </div>
               </div>
             </div>
           </div>
