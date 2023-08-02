@@ -11,11 +11,12 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "arweavekit": "^1.4.7",
     "classnames": "^2.3.2",
+    "emailjs-com": "^3.2.0",
     "othent": "^1.0.637",
     "prop-types": "^15.8.1",
+    "ramda": "^0.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
