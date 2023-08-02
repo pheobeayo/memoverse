@@ -244,7 +244,7 @@ export default function Home() {
                 Explore more
               </p>
             </div>
-
+            {/* props validation */}
             <div className="sm:grid sm:grid-cols-2">
               {BlogDummy.map((Blog) => (
                 <BlogPost
@@ -255,6 +255,60 @@ export default function Home() {
                   more={Blog.more}
                 />
               ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Fourth section */}
+        <div className="bg-stone-950">
+          <div className="container mx-auto px-8 sm:px-[80px] pb-[100px]">
+            <h2 className="text-white text-3xl pb-[30px] font-bold leading-10">
+              Key features of Memoverse
+            </h2>
+
+            <div className="sm:grid sm:grid-cols-3 ">
+              <div className="border border-2 rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px] gap-4">
+                <div className=" grid place-content-center py-[10px]">
+                  <img alt="" src="src/assets/images/icon1.png" />
+                </div>
+                <h2 className="text-white text-xl  text-center font-bold leading-loose">
+                  Creative Writing Tools
+                </h2>
+                <p className=" text-white text-center text-lg font-normal leading-relaxed">
+                  Compose captivating stories, poetry, and <br /> articles using
+                  rich text formatting,
+                  <br /> multimedia embedding, and collaborative <br />
+                  features to bring your ideas to life
+                </p>
+              </div>
+
+              <div className="border border-2 rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
+                <div className=" grid place-content-center py-[10px]">
+                  <img alt="" src="src/assets/images/icon2.png" />
+                </div>
+                <h2 className="text-white text-xl  text-center font-bold leading-loose">
+                  Eternal Photo Albums
+                </h2>
+                <p className=" text-white text-center text-lg font-normal leading-relaxed">
+                  Preserve your cherished memories <br /> forever with Memoverse
+                  secure and <br /> blockchain-backed eternal photo albums.{" "}
+                  <br /> Safeguard photos and precious moments.
+                </p>
+              </div>
+
+              <div className="border border-2 rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
+                <div className=" grid place-content-center py-[10px]">
+                  <img alt="" src="src/assets/images/icon3.png" />
+                </div>
+                <h2 className="text-white text-xl  text-center font-bold leading-loose">
+                  Community and Collaboration
+                </h2>
+                <p className=" text-white text-center text-lg font-normal leading-relaxed">
+                  Engage in co-authoring, receive feedback, <br /> and explore diverse
+                  perspectives, <br /> fostering a thriving space for creativity  <br /> and
+                  shared storytelling experiences.
+                </p>
+              </div>
             </div>
           </div>
         </div>
