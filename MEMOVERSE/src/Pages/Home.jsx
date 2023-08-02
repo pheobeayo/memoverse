@@ -6,6 +6,7 @@ import { useState } from "react";
 import BlogDummy from "../utils/dummyData";
 import BlogPost from "../Component/BlogPost/BlogProps";
 import Subscriber from "../Component/element/subscribe";
+import Footer from "../Component/element/Footer";
 
 export default function Home() {
   const [isHover, setHover] = useState(false);
@@ -268,7 +269,7 @@ export default function Home() {
             </h2>
 
             <div className="sm:grid sm:grid-cols-3 ">
-              <div className="border border-2 rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px] gap-4">
+              <div className="border border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px] gap-4">
                 <div className=" grid place-content-center py-[10px]">
                   <img alt="" src="src/assets/images/icon1.png" />
                 </div>
@@ -283,7 +284,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="border border-2 rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
+              <div className="border border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
                 <div className=" grid place-content-center py-[10px]">
                   <img alt="" src="src/assets/images/icon2.png" />
                 </div>
@@ -297,7 +298,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="border border-2 rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
+              <div className="border border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
                 <div className=" grid place-content-center py-[10px]">
                   <img alt="" src="src/assets/images/icon3.png" />
                 </div>
@@ -342,6 +343,11 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* footer */}
+        <div>
+          <Footer />
         </div>
       </div>
     </div>

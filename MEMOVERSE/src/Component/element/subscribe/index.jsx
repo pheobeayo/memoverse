@@ -59,7 +59,8 @@ export default function Subscriber() {
           <div className="flex">
             <input
               type="text"
-              className="sm:mr-2 px-[6px] sm:px-[60px] sm:py-3 border 
+              className="sm:mr-2 px-[6px] sm:px-[60px] 
+              sm:py-3 border 
             border-gray-300 rounded-l-md 
             focus:outline-none focus:border-blue-500"
               placeholder="Email Address"
