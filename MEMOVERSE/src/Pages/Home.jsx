@@ -12,8 +12,9 @@ export default function Home() {
       <div className="">
         <Header />
 
+        {/* First section */}
         <div className="sm:grid sm:grid-cols-2">
-          {/* Left section */}
+          {/* Left design */}
           <section
             className="container mx-auto px-8 sm:pl-[80px]"
             style={gradientStyle}
@@ -109,37 +110,37 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Right section */}
+          {/* Right design */}
           <section className="bg-stone-950">
             <div className="container mx-auto pt-[80px] px-8 sm:pl-[80px]">
-            <div
-                  className=" "
-                  onMouseOver={() => setHover(true)}
-                  onMouseLeave={() => setHover(false)}
-                >
-                  <div className="overflow-hidden align-middle 
+              <div
+                className=" "
+                onMouseOver={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
+                <div
+                  className="overflow-hidden align-middle 
                   cursor-pointer w-[350.87px] h-[300px] rounded-tl-full 
-                  rounded-tr-full shadow border border-white ">
-                    <img
-                      src="src/assets/images/placeholder.png"
-                      alt="trending blog"
-                      className={classNames({
-                        "scale-110 transition-transform": isHover,
-                      })}
-                    />
-                  </div>
-
-                  <Card className="rounded-none w-[350.87px] h-[250px]">
-                    <p
-                      className="p-[30px]  text-white text-xl font-semibold leading-7"
-                    >
-                      From the majestic peaks of snow-capped mountains to the
-                      sun-kissed beaches with turquoise waters, each photograph
-                      becomes a window to a new world, inviting you to explore
-                      and dream
-                    </p>
-                  </Card>
+                  rounded-tr-full shadow border border-white "
+                >
+                  <img
+                    src="src/assets/images/placeholder.png"
+                    alt="trending blog"
+                    className={classNames({
+                      "scale-110 transition-transform": isHover,
+                    })}
+                  />
                 </div>
+
+                <Card className="rounded-none w-[350.87px] h-[250px]">
+                  <p className="p-[30px]  text-white text-xl font-semibold leading-7">
+                    From the majestic peaks of snow-capped mountains to the
+                    sun-kissed beaches with turquoise waters, each photograph
+                    becomes a window to a new world, inviting you to explore and
+                    dream
+                  </p>
+                </Card>
+              </div>
 
               <div className="grid grid-cols-3 pt-[80px]">
                 <div className="flex gap-4 sm:gap-6">
@@ -171,6 +172,62 @@ export default function Home() {
               </div>
             </div>
           </section>
+        </div>
+
+        {/* Second section */}
+        <div className="bg-stone-950">
+          <div className="container mx-auto px-8 sm:px-[80px] py-[100px]">
+            <h2 className="text-white text-3xl pb-[48px] font-bold leading-10">
+              Welcome to Memoverse, where creativity <br /> meets blockchain
+              technology
+            </h2>
+
+            <div className="sm:grid sm:grid-cols-3 sm:space-x-0 gap-4">
+              {/* first content */}
+              <div>
+                <div className=" w-80 h-px border border-white"></div>
+                <h3 className="text-white text-2xl font-bold leading-loose pt-[40px]">
+                  Secure and Immutable
+                </h3>
+                <p className="text-white text-xl font-normal leading-7">
+                  With blockchain technology, your <br /> memories are forever{" "}
+                  <br />
+                  preserved and tamper-proof.
+                </p>
+              </div>
+
+              {/* second content */}
+              <div>
+                <div className=" w-80 h-px border border-white"></div>
+                <h3 className="text-white text-2xl font-bold leading-loose pt-[40px]">
+                  Connect with a Vibrant Community
+                </h3>
+                <p className="text-white text-xl font-normal leading-7">
+                  Join a community of creators and <br />
+                  storytellers from around the world and <br />
+                  explore
+                </p>
+              </div>
+
+              {/* third content */}
+              <div>
+                <div className=" w-80 h-px border border-white"></div>
+                <h3 className="text-white text-2xl font-bold leading-loose pt-[40px]">
+                  Rewarding Creativity
+                </h3>
+                <p className="text-white text-xl font-normal leading-7">
+                  Earn tokens for your <br />
+                  contributions and engagement <br />
+                  on the platform.
+                </p>
+              </div>
+            </div>
+            <div className="py-[40px]">
+              <button className="bg-gradient-to-r from-orange-400 px-5 py-2.5  to-orange-400 text-white rounded-sm text-center ">
+                Start Creating
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
