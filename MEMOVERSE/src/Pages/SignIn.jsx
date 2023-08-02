@@ -1,3 +1,4 @@
+import SDKDemo from "../Blockchain_Service/delsoon";
 import { gradientStyle } from "../Component/element/GradientStyle";
 export default function SignIn() {
   
@@ -38,7 +39,7 @@ export default function SignIn() {
           </h1>
 
           <div className="outline outline-1 w-full py-2  rounded-lg text-center text-white text-xl font-semibold leading-7">
-            <button>Sign in with Google</button>
+            <SDKDemo />
           </div>
 
           <div className="text-white text-center py-[20px] text-opacity-70 text-2xl font-bold leading-loose">
