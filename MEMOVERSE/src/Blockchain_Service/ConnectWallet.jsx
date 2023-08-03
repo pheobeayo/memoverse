@@ -1,4 +1,3 @@
-import { ArConnect } from "arweavekit/auth";
 import { BlogContext } from "../Store/BlogContext";
 import { useContext } from "react";
 
@@ -11,12 +10,14 @@ const LoginComponent = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await ArConnect.connect(params); // Remove the curly braces around params
+      // Check if ArConnect is available (extension is installed)
+      
+
+      const response = await  window.arweaveWallet.connect(params);
       console.log(response);
       setUser(response);
     } catch (error) {
       console.error("Error during login:", error);
-      
     }
   };
 

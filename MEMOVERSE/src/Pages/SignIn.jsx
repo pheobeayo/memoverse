@@ -1,5 +1,5 @@
-import LoginComponent from "../Blockchain_Service/ConnectWallet";
 import SDKDemo from "../Blockchain_Service/SignInOthent";
+import Wallet_Connect from "../Blockchain_Service/Wallet_Conneect";
 import { gradientStyle } from "../Component/element/GradientStyle";
 
 export default function SignIn() {
@@ -49,7 +49,7 @@ export default function SignIn() {
           </div>
 
           <div className=" bg-gradient-to-r from-orange-400 mb-[100px] to-orange-400  w-full py-2  rounded-lg text-center text-white text-xl font-semibold leading-7">
-            <LoginComponent />
+            <Wallet_Connect />
           </div>
         </div>
       </section>

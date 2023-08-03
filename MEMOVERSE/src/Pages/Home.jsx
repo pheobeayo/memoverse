@@ -7,6 +7,7 @@ import BlogDummy from "../utils/dummyData";
 import BlogPost from "../Component/BlogPost/BlogProps";
 import Subscriber from "../Component/element/subscribe";
 import Footer from "../Component/element/Footer";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [isHover, setHover] = useState(false);
@@ -38,9 +39,11 @@ export default function Home() {
                   Start Creating
                 </button>
 
-                <button className="outline outline-offset-2 outline-1 px-5 py-2 rounded-sm">
-                  Connect Wallet
-                </button>
+                <Link to="/SignIn">
+                  <button className="outline outline-offset-2 outline-1 px-5 py-2 rounded-sm">
+                    Sign In
+                  </button>
+                </Link>
               </div>
             </div>
 
