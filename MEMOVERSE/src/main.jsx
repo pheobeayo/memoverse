@@ -4,7 +4,6 @@ import App from "./App.jsx";
 import "./index.css";
 import { BlogProvider } from "./Store/BlogContext.jsx";
 
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BlogProvider>

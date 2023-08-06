@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header className="">
       <nav className="sm:grid sm:grid-cols-2">
         <div style={gradientStyle}>
           <div
@@ -30,7 +30,7 @@ export default function Header() {
                   <button className="">Home</button>
                 </Link>
 
-                <Link to="/">
+                <Link to="/Dash_Home">
                   <button>Explore</button>
                 </Link>
 
