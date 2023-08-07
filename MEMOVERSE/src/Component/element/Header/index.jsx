@@ -30,7 +30,7 @@ export default function Header() {
                   <button className="">Home</button>
                 </Link>
 
-                <Link to="/Dash_Home">
+                <Link to="/">
                   <button>Explore</button>
                 </Link>
 

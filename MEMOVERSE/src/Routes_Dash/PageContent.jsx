@@ -1,21 +1,26 @@
-import { Outlet, useNavigate } from "react-router";
+
 import SideNav from "./SideNav";
 import { useEffect } from "react";
-
+import Footer from "../Component/element/Footer";
+import { Outlet } from "react-router-dom";
 
 function PageContent() {
-  const  navigate = useNavigate();
-
   useEffect(() => {
-    navigate ('/dashboard/home');
+    window.location.hash = "/dashboard/home";
+  }, []);
 
-  }, [navigate]);
-  
   return (
-    <div className="PageContent flex">
-      <SideNav />
-      <Outlet />
-    </div>
+    <>
+      <div className="PageContent flex ">
+       
+        <SideNav />
+        <div className="w-full bg-stone-900">
+          <Outlet />
+        </div>
+      </div>
+      <Footer />
+     
+    </>
   );
 }
 export default PageContent;
