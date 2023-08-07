@@ -11,6 +11,8 @@ import Dash_Home from "./Container/Dash_Home";
 import Profile from "./Container/Profile";
 import Footer from "./Component/element/Footer";
 import PageContent from "./Routes_Dash/PageContent";
+import BlogPage from "./Pages/BlogPage";
+import PhotoCreate from "./Pages/PhotoCreation";
 
 
 
@@ -26,6 +28,8 @@ export default function App() {
             <Route path="home" element={<Dash_Home />} />
             <Route path="profile" element={<Profile />} />
           </Route>
+          <Route path="/BlogCreate" element={<BlogPage />} />
+          <Route path="/PhotoCreate" element={<PhotoCreate />} />
         </Routes>
       </HashRouter>
     </div>

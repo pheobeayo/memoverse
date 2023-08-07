@@ -30,15 +30,7 @@ export default function Header() {
                   <button className="">Home</button>
                 </Link>
 
-                <Link to="/">
-                  <button>Explore</button>
-                </Link>
-
-                <Link to="/">
-                  <button>About us</button>
-                </Link>
-
-                <Link to="/">
+                <Link to="/dashboard">
                   <button>Dashboard</button>
                 </Link>
               </div>

@@ -35,9 +35,11 @@ export default function Home() {
               </p>
 
               <div className="space-x-6 pt-[10px]">
-                <button className="bg-gradient-to-r from-orange-400 px-5 py-2.5  to-orange-400 text-white rounded-sm text-center ">
+                <Link to="/dashboard">
+                <button className="rounded-md bg-gradient-to-r from-orange-400 px-5 py-2.5  to-orange-400 text-white rounded-sm text-center ">
                   Start Creating
                 </button>
+                </Link>
 
                 <Link to="/SignIn">
                   <button className="outline outline-offset-2 outline-1 px-5 py-2 rounded-sm">
@@ -321,7 +323,7 @@ export default function Home() {
         {/* Fifth section */}
         <div className="bg-stone-950">
           <div className="container mx-auto  sm:px-[80px] pb-[100px]">
-            <div style={gradientStyle}>
+            <div style={gradientStyle} className="rounded-md">
               <div className="sm:flex sm:justify-between  py-[40px] px-[100px]">
                 <div className="hidden  sm:grid sm:w-[317px] sm:h-[312px]">
                   <img
