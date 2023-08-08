@@ -232,9 +232,11 @@ export default function Home() {
               </div>
             </div>
             <div className="py-[40px]">
+              <Link to="/dashboard">
               <button className="bg-gradient-to-r from-orange-400 px-5 py-2.5  to-orange-400 text-white rounded-sm text-center ">
                 Start Creating
               </button>
+              </Link>
             </div>
           </div>
         </div>

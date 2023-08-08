@@ -13,7 +13,7 @@ export default function BlogPage() {
   const [content, setContent] = useState("");
   const [fileUrl, setFileUrl] = useState("");
   const [loading, setLoading] = useState("");
-  const [ ImgBase64, setImgBase64] = useState("");
+  const [  setImgBase64] = useState("");
 
   const { getRootProps, getInputProps, open, acceptedFiles } = useDropzone({
     noClick: true,

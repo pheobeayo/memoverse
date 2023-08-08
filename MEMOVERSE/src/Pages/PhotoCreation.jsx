@@ -10,6 +10,7 @@ export default function PhotoCreate() {
   const [photoUrl, setPhotoUrl] = useState("");
   const [ setImgBase64] = useState("");
   const [loading, setLoading] = useState("");
+  const [fileUrl, setFileUrl] = useState("");
 
   const { getRootProps, getInputProps, open, acceptedFiles } = useDropzone({
     noClick: true,
