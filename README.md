@@ -93,11 +93,12 @@ MemoVerse effectively addresses the challenge of digital content ownership and r
 
 **LINKS**
 Community: https://discord.gg/vGA3Mf46
+
 Twitter: https://twitter.com/VerseMemo69530?t=McMsU5qC8lqVG_cQHWzyFg&s=09
 
 **MEET THE TEAM**
 Product Manager: Kareem Motunrayo 
-Frontend Developer: Koxy 
+Frontend Developer & Smart Contract integration Engineer: Koxy 
 Smart Contract Developer: Nafkem
 Product Designer: Yinka
 
