@@ -270,12 +270,13 @@ export default function Home() {
 
         {/* Fourth section */}
         <div className="bg-stone-950">
-          <div className="container mx-auto px-8 sm:px-[80px] pb-[100px]">
+          <div className="container mx-auto px-8
+           sm:px-[80px] pb-[100px]">
             <h2 className="text-white text-3xl pb-[30px] font-bold leading-10">
               Key features of Memoverse
             </h2>
 
-            <div className="sm:grid sm:grid-cols-3 ">
+            <div className="sm:grid sm:grid-cols-3 sm:gap-3   ">
               <div className="border border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px] gap-4">
                 <div className=" grid place-content-center py-[10px]">
                   <img alt="" src="src/assets/images/icon1.png" />

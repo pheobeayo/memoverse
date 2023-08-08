@@ -5,7 +5,7 @@ function BlogPost(props) {
     <div >
       {/* first blog */}
       <div className="sm:flex gap-4 px-6 py-[40px]">
-        <img alt="" className='' src={props.imgSrc} />
+        <img alt="" className='w-[121px] h-[240px]' src={props.imgSrc} />
         <div>
           <h3 className="text-orange-300 text-xl font-semibold leading-7">
             {props.title}
