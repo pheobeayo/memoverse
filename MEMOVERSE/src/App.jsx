@@ -1,3 +1,4 @@
+
 import {
   Outlet,
   Route,
@@ -16,20 +17,23 @@ import PhotoCreate from "./Pages/PhotoCreation";
 
 
 
+
 export default function App() {
+ 
   return (
     <div className="app">
       <HashRouter>
         <Routes>
           <Route path="/" element={<Root />} />
           <Route index element={<Home />} />
-          <Route path="/SignIn" element={<SignIn />} />
+          <Route path="/SignIn" element={<SignIn  />} />
           <Route path="/dashboard" element={<PageContent />}>
             <Route path="home" element={<Dash_Home />} />
             <Route path="profile" element={<Profile />} />
           </Route>
           <Route path="/BlogCreate" element={<BlogPage />} />
           <Route path="/PhotoCreate" element={<PhotoCreate />} />
+          
         </Routes>
       </HashRouter>
     </div>

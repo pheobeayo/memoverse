@@ -29,7 +29,9 @@ const SDKDemo = () => {
       // Check if userDetails is not null or undefined
       if (!isNil(userDetails)) {
         setUser({
-          userId: userDetails.contract_id, // Use userDetails.contract_id to access the contract_id property
+          userId: userDetails.nickname, 
+          userPicture: userDetails.picture,
+          userContract: userDetails.contract_Id, // Use userDetails.contract_id to access the contract_id property
         });
       }
     } catch (error) {

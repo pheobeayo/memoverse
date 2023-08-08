@@ -23,7 +23,7 @@ const [isSigningIn, setIsSigningIn] = useState(false);
       const walletNames = await window.arweaveWallet.getWalletNames();
       console.log("Your wallet address is", walletNames);
 
-      setUser(walletNames);
+      setUser();
     } catch (error) {
       console.error("Error during login:", error);
     } finally {

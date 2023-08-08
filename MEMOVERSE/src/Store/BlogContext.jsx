@@ -9,6 +9,8 @@ export const BlogContext = createContext();
 export function BlogProvider(props) {
 
   const [user, setUser] = useState(null);
+  const [picture, setPicture] = useState(null);
+  const [contract_Id, setContract_Id] = useState(null);
 
 
   return (
@@ -16,7 +18,11 @@ export function BlogProvider(props) {
       <BlogContext.Provider
         value={{
           user,
-          setUser
+          setUser,
+          picture,
+          setPicture,
+          contract_Id,
+          setContract_Id,
         }}
       >
         {props.children}

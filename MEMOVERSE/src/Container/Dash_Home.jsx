@@ -1,7 +1,13 @@
+import { useContext } from "react";
 import { gradientStyle } from "../Component/element/GradientStyle";
 import { Link } from "react-router-dom";
+import { BlogContext } from "../Store/BlogContext";
+
 
 export default function Dash_Home() {
+ const {user, picture} = useContext(BlogContext)
+ console.log('username', user)
+ console.log('picture', picture)
   return (
     <div className=" ">
       <div className="px-[20px] md:px-[40px]">
@@ -11,10 +17,10 @@ export default function Dash_Home() {
           </h2>
           <div className="hidden sm:flex space-x-2">
             <h2 className="text-white text-lg md:text-3xl font-semibold leading-9">
-              Primose Roberts
+              {user.userId}
             </h2>
             <img
-              src="src/assets/images/profile.jpeg"
+              src={user.userPicture}
               className="w-[15px]  h-[15px] sm:w-[30px] sm:h-[30px] rounded-full"
               alt="profile-pic"
             />
@@ -22,7 +28,7 @@ export default function Dash_Home() {
         </div>
 
         <div className="flex  text-white text-xs sm:text-base font-normal leading-normal justify-between">
-          <p>Hello Primrose, welcome back!</p>
+          <p>Hello {user.userId} , welcome back!</p>
 
           <div className="hidden sm:flex text-white space-x-4">
             <div className="flex space-x-2">
@@ -110,7 +116,7 @@ export default function Dash_Home() {
                 <p className="pb-2">
                   {" "}
                   4) Viola! 🎉 Let Memoverse create the magic as you hit the
-                  "Publish" button.
+                  Publish button.
                 </p>
               </div>
             </div>

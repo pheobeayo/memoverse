@@ -4,7 +4,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import Header from "../Component/element/Header";
 import Footer from "../Component/element/Footer";
-
+import { getBundlr } from "../Blockchain_Service";
+import { Othent } from "othent";
 
 export default function BlogPage() {
   const [title, setTitle] = useState("");
@@ -12,6 +13,7 @@ export default function BlogPage() {
   const [content, setContent] = useState("");
   const [fileUrl, setFileUrl] = useState("");
   const [loading, setLoading] = useState("");
+  const [ ImgBase64, setImgBase64] = useState("");
 
   const { getRootProps, getInputProps, open, acceptedFiles } = useDropzone({
     noClick: true,
@@ -62,22 +64,20 @@ export default function BlogPage() {
     </li>
   ));
 
-
   const resetForm = () => {
     setTitle("");
     setTagline("");
     setContent("");
     setFileUrl("");
-   
   };
 
-  
   const handlrBundlrUpload = async (fileUrl) => {
+    await window.ethereum.request({ method: 'eth_requestAccounts' })
     const bundlr = await getBundlr();
 
     try {
       console.log(fileUrl);
-      const dataStream = fileReaderStream(fileUrl);
+      const dataStream = FileReader(fileUrl);
       const Price = await bundlr.getPrice(fileUrl.size);
       console.log("price:", Price);
       const balance = await bundlr.getLoadedBalance();
@@ -91,18 +91,32 @@ export default function BlogPage() {
         console.log("Funding not needed, balance sufficient.");
       }
 
-      const fileType = "image/png";
-      const response = await bundlr.upload(dataStream, {
-        tags: [{ name: "Content-Type", value: fileType }],
+      //const fileType = "image/png";
+
+      const signedBundlrTransaction = await Othent.signTransactionBundlr({
+        othentFunction: "uploadData",
+        data: dataStream,
+        tags: [{ name: "Test", value: "Tag" }],
       });
-      console.log("bundlr uploaded file:", response.id);
+      console.log(signedBundlrTransaction);
+
+      const transaction = await Othent.sendTransactionBundlr(
+        signedBundlrTransaction
+      );
+
+      console.log(transaction);
+
+      //const response = await bundlr.upload(dataStream, {
+      //tags: [{ name: "Content-Type", value: fileType }],
+      // });
+      //console.log("bundlr uploaded file:", response.id);
 
       console.log("Content ID successfully saved to local storage.");
 
       console.log(
-        `Upload success content URI= https://arweave.net/${response.id}`
+        `Upload success content URI= https://arweave.net/${transaction.id}`
       );
-      return `https://arweave.net/${response.id}`;
+      return `https://arweave.net/${transaction.id}`;
     } catch (error) {
       console.log("Error uploading file: ", error);
     }
@@ -110,28 +124,24 @@ export default function BlogPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    await handlrBundlrUpload(fileUrl);
+    
 
     if (!title || !tagline || !content || !fileUrl) {
       console.log(title);
       console.log(tagline);
       console.log(content);
       console.log(fileUrl);
-      console.log(category);
-     
+
       toast.error("Please fill all required fields");
     } else {
-      
       setLoading({ show: true, msg: "Nft..." });
 
       try {
         // Do something with the form data
         setLoading(true);
 
-        const bundlrUploadUrl = await handlrBundlrUpload(fileUrl);
-        const tokenID = await handleCreateListing(price, totalShares);
-
-        console.log(tokenID);
-        await handleNft_details(tokenID, bundlrUploadUrl);
+        
 
         setLoading(false);
         resetForm();
@@ -139,7 +149,7 @@ export default function BlogPage() {
         toast.success("Nft successfully minted!");
       } catch (error) {
         console.log(error);
-        toast.error("An error occurred while minting the Nft");
+        toast.error("An error occurred while trying to publish");
       }
     }
   };
@@ -232,7 +242,8 @@ export default function BlogPage() {
                   Content of your blog post
                 </label>
                 <textarea
-                     rows="9" cols="70"
+                  rows="9"
+                  cols="70"
                   className="
                 border rounded w-full md:w-[600px] 
                 px-3
@@ -246,8 +257,6 @@ export default function BlogPage() {
                   placeholder="Enter the content of your blog post"
                 />
               </div>
-
-             
 
               {/* picture / add nft input */}
               <div
@@ -293,7 +302,8 @@ export default function BlogPage() {
                   className="pt-[20px] text-center text-gray-700 
                 text-opacity-50"
                 >
-                  Drag 'n' drop or Select files here <br /> Pictures (in jpeg or png format only)
+                  Drag and drop or Select files here <br /> Pictures (in jpeg or
+                  png format only)
                 </p>
                 <button
                   className="text-violet-500 pb-[50px] flex justify-center align-center"
@@ -303,11 +313,10 @@ export default function BlogPage() {
                   Select file
                 </button>
               </div>
+
               <aside className="text-white">
                 <ul>{Files}</ul>
               </aside>
-
-              
 
               <div
                 className="bg-gradient-to-r mt-[50px] from-orange-400 px-5 py-2.5 
