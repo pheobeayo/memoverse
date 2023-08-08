@@ -81,11 +81,13 @@ As we set our sights on the horizon, these upcoming developments reflect our ded
 
 The future of Memoverse is an exciting tapestry of possibilities, and we invite you to join us on this remarkable journey of innovation and connection.
 
-#lINK TO SUBMITTED ARWEAVE COMMUNITY HACKATHON
+#LINK TO SUBMITTED ARWEAVE COMMUNITY HACKATHON
 https://devpost.com/software/memoverse
 
-#lINK TO OUR FIGMA DESIGN
+
+#LINK TO OUR FIGMA DESIGN
 https://www.figma.com/file/gIrS9wpN2mqpgaxBxCVzXV/MEMOVERSE?node-id=11%3A971&mode=dev
+
 
 #LINK TO OUR DEPLOYED SITE ON PERMAWEB
 https://3brugxxaukd2l4aljvth2ko2pulwz7dekd3pizphfi62fhbmpzeq.arweave.net/2GNDXuCih6XwC01mfSnafRds_GRQ9vRl5yo9opwsfkk/
