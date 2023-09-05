@@ -7,8 +7,14 @@ export default defineConfig({
     alias: {
       process: 'process/browser',
       util: 'util',
+      stream: 'stream-browserify',
+      crypto: 'crypto-browserify',
     },
   },
-  base: '',
+  base: './',
   plugins: [react()],
+  define: {
+    global: {},
+    process: {},
+  }
 });
