@@ -36,14 +36,14 @@ export default function Home() {
 
               <div className="space-x-6 pt-[10px]">
                 <Link to="/dashboard">
-                <button className="rounded-md bg-gradient-to-r from-orange-400 px-5 py-2.5  to-orange-400 text-white rounded-sm text-center ">
-                  Start Creating
-                </button>
+                  <button className="rounded-md bg-gradient-to-r from-orange-400 px-5 py-2.5  to-orange-400 text-white rounded-sm text-center ">
+                    Start Creating
+                  </button>
                 </Link>
 
                 <Link to="/SignIn">
                   <button className="outline outline-offset-2 outline-1 px-5 py-2 rounded-sm">
-                    Sign In
+                    Connect Wallet
                   </button>
                 </Link>
               </div>
@@ -222,20 +222,20 @@ export default function Home() {
               <div>
                 <div className=" w-80 h-px border border-white"></div>
                 <h3 className="text-white text-2xl font-bold leading-loose pt-[40px]">
-                  Rewarding Creativity
+                  Unleash Your Creativity
                 </h3>
                 <p className="text-white text-xl font-normal leading-7">
-                  Earn tokens for your <br />
-                  contributions and engagement <br />
-                  on the platform.
+                  Write, create, share and secure <br />
+                  those memories forever on the <br />
+                  blockchain.
                 </p>
               </div>
             </div>
             <div className="py-[40px]">
               <Link to="/dashboard">
-              <button className="bg-gradient-to-r from-orange-400 px-5 py-2.5  to-orange-400 text-white rounded-sm text-center ">
-                Start Creating
-              </button>
+                <button className="bg-gradient-to-r from-orange-400 px-5 py-2.5  to-orange-400 text-white rounded-sm text-center ">
+                  Start Creating
+                </button>
               </Link>
             </div>
           </div>
@@ -270,8 +270,10 @@ export default function Home() {
 
         {/* Fourth section */}
         <div className="bg-stone-950">
-          <div className="container mx-auto px-8
-           sm:px-[80px] pb-[100px]">
+          <div
+            className="container mx-auto px-8
+           sm:px-[80px] pb-[100px]"
+          >
             <h2 className="text-white text-3xl pb-[30px] font-bold leading-10">
               Key features of Memoverse
             </h2>

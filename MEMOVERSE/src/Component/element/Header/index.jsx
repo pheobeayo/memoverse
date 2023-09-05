@@ -25,14 +25,24 @@ export default function Header() {
                 src="src/assets/images/MEMOVERSE (2).png"
               />
 
-              <div className="hidden sm:flex  text-stone-950 text-lg font-semibold  space-x-4">
+              <div className="hidden sm:flex  text-stone-950 text-semibold font-medium  space-x-4">
                 <Link to="/">
                   <button className="">Home</button>
+                </Link>
+
+                <Link to="/explore">
+                  <button>Explore</button>
+                </Link>
+
+                <Link to="/about-us">
+                  <button>About us</button>
                 </Link>
 
                 <Link to="/dashboard">
                   <button>Dashboard</button>
                 </Link>
+
+                
               </div>
 
               <div className="md:hidden mb-4 ">
