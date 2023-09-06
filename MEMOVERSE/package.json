@@ -17,7 +17,7 @@
     "@emailjs/browser": "^3.11.0",
     "arweavekit": "^1.4.7",
     "classnames": "^2.3.2",
-    "crypto": "^1.0.1",
+    "flowbite-react": "^0.5.0",
     "kwil": "^3.2.3",
     "othent": "^1.0.637",
     "prop-types": "^15.8.1",
