@@ -83,7 +83,7 @@ export default function Dash_Home() {
                 {/* buttons */}
                 <div className="flex space-x-6">
                   <Link to="/BlogCreate">
-                    <button className="bg-gradient-to-r rounded-md from-orange-400 sm:px-5 sm:py-2.5  to-orange-400 text-white rounded-sm text-center ">
+                    <button className="bg-gradient-to-r  from-orange-400 sm:px-5 sm:py-2.5  to-orange-400 text-white rounded-sm text-center ">
                       Post a blog
                     </button>
                   </Link>

@@ -4,7 +4,6 @@ import { AiOutlineHome } from "react-icons/ai";
 import { RxPerson } from "react-icons/rx";
 import { PiToolboxBold } from "react-icons/pi";
 import { BiBox } from "react-icons/bi";
-import { LiaChartPieSolid } from "react-icons/lia";
 import { FiSettings } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -78,7 +77,7 @@ export default function SideNav() {
             </div>
           </MenuItem>
 
-          <MenuItem active component={<Link to="Explore" />}>
+          <MenuItem active component={<Link to="explore" />}>
             <div className="flex space-x-2">
               <PiToolboxBold
                 size={20}
@@ -95,15 +94,7 @@ export default function SideNav() {
             </div>
           </MenuItem>
 
-          <MenuItem active>
-            <div className="flex space-x-2">
-              <LiaChartPieSolid
-                size={20}
-                style={{ color: "white", opacity: 0.7 }}
-              />
-              <h1 className="hidden md:grid text-white text-opacity-70">Activities</h1>
-            </div>
-          </MenuItem>
+          
 
           <div
             className="py-[50px] pl-[23px]
@@ -115,27 +106,11 @@ export default function SideNav() {
           <MenuItem active>
             <div className="flex space-x-2">
               <FiSettings size={20} style={{ color: "white", opacity: 0.7 }} />
-              <h1 className=" hidden md:grid text-white text-opacity-70">Profile</h1>
+              <h1 className=" hidden md:grid text-white text-opacity-70">Edit Profile</h1>
             </div>
           </MenuItem>
 
-          <MenuItem active>
-            <div className="flex space-x-2">
-              <FiSettings size={20} style={{ color: "white", opacity: 0.7 }} />
-              <h1 className="hidden md:grid  text-white text-opacity-70">Post</h1>
-            </div>
-          </MenuItem>
-
-          <MenuItem active>
-            <div className="flex space-x-2">
-              <FiSettings size={20} style={{ color: "white", opacity: 0.7 }} />
-              <h1 className="hidden md:grid text-white text-opacity-70">Photo Album</h1>
-            </div>
-          </MenuItem>
-
-          <div className="hidden md:grid py-[60px] mb-[100px] px-[20px] w-[200px] h-[200px] cursor-pointer">
-            <img src="src/assets/images/Help.jpeg" alt="helpCenter" />
-          </div>
+          
         </Menu>
       </Sidebar>
     </>

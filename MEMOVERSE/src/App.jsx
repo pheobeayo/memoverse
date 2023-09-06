@@ -14,6 +14,7 @@ import Footer from "./Component/element/Footer";
 import PageContent from "./Routes_Dash/PageContent";
 import BlogPage from "./Pages/BlogPage";
 import PhotoCreate from "./Pages/PhotoCreation";
+import Explore from "./Container/Explore";
 
 
 
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/dashboard" element={<PageContent />}>
             <Route path="home" element={<Dash_Home />} />
             <Route path="profile" element={<Profile />} />
+            <Route path="explore" element={<Explore/>} />
           </Route>
           <Route path="/BlogCreate" element={<BlogPage />} />
           <Route path="/PhotoCreate" element={<PhotoCreate />} />
