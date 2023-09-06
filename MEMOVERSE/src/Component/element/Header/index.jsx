@@ -69,7 +69,7 @@ export default function Header() {
                   className="bg-gradient-to-r from-orange-400 px-5 py-2.5 
                   to-orange-400 text-white rounded-sm text-center"
                 >
-                  SignIn
+                  Connect Wallet
                 </button>
               </Link>
             </div>
